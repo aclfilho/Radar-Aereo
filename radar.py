@@ -7,7 +7,7 @@ import time
 URL = "https://opensky-network.org/api/states/all"
 
 # 🔹 Definir filtros
-FILTRO_COMPANHIA = ["GOL", "LATAM", "AZUL"]  # Deixe vazio [] para mostrar todas as companhias
+FILTRO_COMPANHIA = []  # Deixe vazio [] para mostrar todas as companhias
 ALTITUDE_MINIMA = 5000  # Exibir apenas aviões acima de 5000 metros
 VELOCIDADE_MINIMA = 200  # Exibir apenas aviões acima de 200 km/h
 
@@ -70,7 +70,7 @@ def gerar_mapa():
     print("Mapa atualizado! Abra 'radar_voos_filtrado.html' no navegador.")
 
 # Loop de atualização automática
-intervalo = 60  # Tempo em segundos para atualizar
+intervalo = 10  # Tempo em segundos para atualizar
 
 while True:
     gerar_mapa()
